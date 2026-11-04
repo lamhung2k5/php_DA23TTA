@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 460px;
+    padding: 30px 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.header h2 {
+    color: #0369a1;
+    font-size: 1.45rem;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label.label-title {
+    display: block;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.radio-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f8fafc;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: #334155;
+    cursor: pointer;
+}
+
+.radio-item input[type="radio"] {
+    accent-color: #0284c7;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.btn-calc {
+    width: 100%;
+    background-color: #0284c7;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 4px;
+}
+
+.btn-calc:hover {
+    background-color: #0369a1;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    color: #dc2626;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border-left: 4px solid #ef4444;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+.result-card {
+    margin-top: 22px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #bbf7d0;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.08);
+    padding: 18px;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.result-badge {
+    background: #ecfdf5;
+    color: #059669;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 16px;
+    letter-spacing: 0.5px;
+    border: 1px solid #a7f3d0;
+}
+
+.result-radius {
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.result-radius strong {
+    color: #0f172a;
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.metric-item {
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+}
+
+.metric-chuvi {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+.metric-dientich {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.metric-chuvi .metric-label {
+    color: #166534;
+}
+
+.metric-dientich .metric-label {
+    color: #075985;
+}
+
+.metric-formula {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.metric-value {
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.metric-chuvi .metric-value {
+    color: #15803d;
+}
+
+.metric-dientich .metric-value {
+    color: #0284c7;
+}
