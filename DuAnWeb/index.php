@@ -1,5 +1,6 @@
 <?php
     include("header.php");
+    session_start();
 ?>
 
 <?php
@@ -31,4 +32,5 @@
 ?>
 <?php
     include("footer.php");
+    $_SESSION["error_message"] = " ";
 ?>
