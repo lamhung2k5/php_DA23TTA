@@ -4,32 +4,31 @@
 ?>
 
 <?php
-    if(isset($_GET["id"]))
-    {
-        $id = $_GET["id"];
-
-        switch($id){
-            case 1:
-                echo "<h3>Bài tập nhóm 15</h3>";
-                include("bt_cac_nhom/n15.php");
-                break;
-            case 2:
-                echo "<h3>Bài tập nhóm 17</h3>";
-                include("bt_cac_nhom/n17.php");
-                break;
-            case 3:
-                echo "<h3>Bài tập số 2</h3>";
-                include("bt1.php");
-                break;
-            default:
-                echo "bài tập không tồn tại";
-        }
-    }
-    else
-    {
-        echo "nhập bài tập bên trái";
-    }
+    include("ketnoi.php");
+    $sql = "select * from sach";
+    $kq = mysqli_query($conn,$sql);
+    $count = 1;
 ?>
+
+<div class="books-list">
+    <table>
+    <?php while($row = mysqli_fetch_array($kq)) : ?>
+        <tr>
+            <td><?=$count++?></td>
+            <td><img src="<?=$row["hinhsach"]?>" alt=""></td>
+            <td>
+                <p>tên sách: <?=$row["tensach"]?></p>
+                <p>giá: <?=$row["gia"]?></p>
+                <p>mô tả: <?=$row["mota"]?></p> 
+                <p>nhà xuất bản: <?=$row["nxb"]?></p>
+                <a href="xemchitiet.php">xem chi tiết</a>
+            </td>
+        </tr>
+    <?php endwhile; ?>
+    </table>
+        
+</div>
+
 <?php
     include("footer.php");
     $_SESSION["error_message"] = " ";
